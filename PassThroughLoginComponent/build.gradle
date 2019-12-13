@@ -15,12 +15,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 23
+        minSdkVersion 24
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -53,5 +53,12 @@ dependencies {
 
     androidTestCompile('com.android.support.test:runner:0.4.1') {
         exclude module: 'support-annotations'
+    }
+}
+
+repositories {
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
     }
 }
